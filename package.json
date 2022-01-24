@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "tdd:playwright": "npx playwright test -c tests/playwright/playwright.conf.js",
+    "tdd:nightwatch": "npx nightwatch -c tests/nightwatch/nightwatch.conf.js",
+    "tdd:cypress": "npx cypress run --headed --project tests --config-file cypress/config.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.18.0",
+    "chromedriver": "^97.0.0",
+    "cypress": "^9.3.1",
+    "nightwatch": "^1.7.13",
+    "nightwatch-api": "^3.0.2",
+    "playwright": "^1.18.0"
+  }
+}
