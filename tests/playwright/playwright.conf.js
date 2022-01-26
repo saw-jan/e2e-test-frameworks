@@ -1,9 +1,10 @@
 const { devices } = require("@playwright/test");
+const HEADLESS = process.env.HEADLESS === "true";
 
 const config = {
   use: {
-    headless: true,
-    baseURL: "https://github.com",
+    headless: HEADLESS,
+    baseURL: "http://localhost:3000",
     channel: "chrome",
   },
   testDir: "./tdd",
