@@ -14,8 +14,9 @@ test("TODO user journey", async ({ page }) => {
   await expect(page.locator("#txt1")).toHaveText("Practice OOP");
   // mark as done
   await page.click("#l0 input[type='checkbox']");
-  const style = await page.locator("#txt0").getAttribute("style");
-  expect(style.includes("text-decoration: line-through;")).toBeTruthy();
+  await page
+    .expect(page.locator("#txt0"))
+    .toHaveCSS("text-decoration", "line-through solid rgb(0, 0, 0)");
   // delete todo
   await page.locator("#l0").hover();
   await page.click("#btn0");

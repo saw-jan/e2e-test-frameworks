@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         if (doneTodos.includes(index)) {
           todoCheck.checked = true;
-          todoTxt.style.textDecoration = "line-through";
+          todoTxt.classList.add("strike");
         }
 
         todoRemove.addEventListener("click", function () {
@@ -63,11 +63,11 @@ window.addEventListener("DOMContentLoaded", function () {
         todoCheck.addEventListener("click", function (e) {
           if (e.target.checked) {
             if (!doneTodos.includes(index)) {
-              todoTxt.style.textDecoration = "line-through";
+              todoTxt.classList.add("strike");
               doneTodos.push(index);
             }
           } else {
-            todoTxt.style.textDecoration = "none";
+            todoTxt.classList.remove("strike");
             if (doneTodos.includes(index)) {
               curIndex = doneTodos.indexOf(index);
               doneTodos.splice(curIndex, 1);

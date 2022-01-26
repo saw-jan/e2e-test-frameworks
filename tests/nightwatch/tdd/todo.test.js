@@ -8,7 +8,6 @@ test("TODO user journey", async (page) => {
   await page.expect.element("#txt1").text.to.equal("Practice OOP");
   // mark as done
   await page.click("#l0 input[type='checkbox']");
-  const style = await page.getCssProperty("#txt0", "style");
   await page.expect
     .element("#txt0")
     .to.have.css("text-decoration")
