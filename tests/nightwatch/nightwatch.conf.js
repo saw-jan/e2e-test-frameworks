@@ -1,3 +1,7 @@
+const HEADLESS = process.env.HEADLESS === "true";
+const chromeArgs = ["window-size=1280,720"];
+HEADLESS ? chromeArgs.push("headless") : null;
+
 module.exports = {
   src_folders: ["./tests/nightwatch/tdd"],
 
@@ -9,11 +13,11 @@ module.exports = {
 
   test_settings: {
     default: {
-      launch_url: "https://github.com",
+      launch_url: "http://localhost:3000",
       desiredCapabilities: {
         browserName: "chrome",
         chromeOptions: {
-          args: ["headless", "window-size=1280,720"],
+          args: [...chromeArgs],
         },
       },
     },
