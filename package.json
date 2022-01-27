@@ -1,4 +1,7 @@
 {
+  "name": "e2e-test-frameworks",
+  "description": "Comparison of different e2e testing frameworks",
+  "version": "1.0.0",
   "scripts": {
     "start": "http-server app/ -p 3000 -c-1",
     "watch": "nodemon --watch app -e js,css,html --exec 'npm start'",
@@ -6,6 +9,11 @@
     "tdd:nightwatch": "npx nightwatch -c tests/nightwatch/nightwatch.conf.js",
     "tdd:cypress": "npx cypress run --headed --project tests --config-file cypress/config.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saw-jan/e2e-test-frameworks.git"
+  },
+  "author": "Sawjan Gurung",
   "devDependencies": {
     "@playwright/test": "^1.18.0",
     "chromedriver": "^97.0.0",
