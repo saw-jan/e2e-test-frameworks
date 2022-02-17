@@ -69,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function () {
           } else {
             todoTxt.classList.remove("strike");
             if (doneTodos.includes(index)) {
-              curIndex = doneTodos.indexOf(index);
+              const curIndex = doneTodos.indexOf(index);
               doneTodos.splice(curIndex, 1);
             }
           }
